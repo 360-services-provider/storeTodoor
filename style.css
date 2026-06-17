@@ -443,6 +443,19 @@ canvas {
     line-height: 1.4;
 }
 
+.watermark-hider {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 90px;
+    height: auto;
+    z-index: 20;
+    opacity: 0.95;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 5px;
+}
+
 footer {
     text-align: center;
     padding: 2rem;

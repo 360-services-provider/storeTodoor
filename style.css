@@ -445,8 +445,8 @@ canvas {
 
 .watermark-hider {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 40px;
+    right: 70px;
     width: 90px;
     height: auto;
     z-index: 20;

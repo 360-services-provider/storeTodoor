@@ -1,0 +1,463 @@
+:root {
+    --primary-color: #2b5c5d;
+    --secondary-color: #4a8e8f;
+    --accent-color: #f7a8b8;
+    --bg-color: #fcf9f6; /* slightly warmer background matching the screenshots */
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --light-text: #666666;
+    --red-btn: #e51e1e;
+    --blue-text: #2c3e8a;
+    --yellow-prize: #fdf5d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    background: linear-gradient(to bottom, #e0f2f1, var(--bg-color));
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-container-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#stork-hero-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.header-content {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.domain {
+    font-size: 1rem;
+    color: var(--light-text);
+    font-weight: 300;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex: 1;
+}
+
+.stork-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.left-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.charity-box {
+    background-color: #f0f7f4;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+    border: 2px dashed #a5d6a7;
+}
+
+.charity-text {
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.pets-illustration {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.portal-card {
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.portal-card:hover {
+    border-color: var(--secondary-color);
+}
+
+.portal-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.portal-mockup {
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+    color: #1976d2;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    border: 1px dashed #90caf9;
+}
+
+.competition-card {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    text-align: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.competition-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #d32f2f;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    line-height: 1.2;
+}
+
+/* Old Sections Styles */
+.hero-animation-section {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    background-color: #1a1a1a;
+}
+
+.sticky-wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    width: 80%;
+}
+
+.hero-overlay h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    color: #1a1a1a;
+}
+
+.hero-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: #1a1a1a;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--red-btn);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c01414;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.info-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.info-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.info-text h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.sweet-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.sweet-img {
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.sweet-title {
+    font-size: 2.5rem;
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.sweet-subtitle {
+    font-size: 1.5rem;
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.prize-banner {
+    background-color: var(--yellow-prize);
+    color: #8b6b0b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.competition-details {
+    display: flex;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.voting-choices, .voting-rules {
+    flex: 1;
+}
+
+.voting-choices h3, .voting-rules h3 {
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.voting-choices hr {
+    border: none;
+    border-top: 1px dashed var(--blue-text);
+    margin-bottom: 1rem;
+}
+
+.voting-choices ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.voting-choices li {
+    margin-bottom: 0.8rem;
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    font-weight: bold;
+}
+
+.fill-name {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px dashed var(--blue-text);
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    background: transparent;
+    outline: none;
+}
+
+.voting-rules ol {
+    padding-left: 1.5rem;
+    color: var(--blue-text);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    font-weight: bold;
+}
+
+.voting-rules li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .info-section, .info-section.reverse {
+        flex-direction: column;
+    }
+    .competition-details {
+        flex-direction: column;
+    }
+    .stork-layout {
+        flex-direction: column;
+    }
+}
